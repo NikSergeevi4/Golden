@@ -1,0 +1,32 @@
+.container {
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+
+.title {
+    padding-top: 120px;
+    font-family: Arial;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    color: #222;
+    text-transform: uppercase;
+}
+
+.subtitle {
+    padding-top: 20px;
+    font-size: 16px;
+    font-weight: normal;
+    text-align: center;
+    color: #777;
+}
+
+
+
+@import './blocks/promo';
+@import './blocks/services';
+@import './blocks/portfolio';
+@import './blocks/about';
+@import './blocks/footer';

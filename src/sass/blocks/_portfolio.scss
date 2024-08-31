@@ -1,0 +1,9 @@
+.portfolio {
+    min-height: 700px;
+    background-color:#f7f7f7;
+    &__wrapper {
+        padding-top: 75px;
+        display: flex;
+        justify-content: space-around;
+    }
+}
