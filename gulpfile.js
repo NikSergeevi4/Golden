@@ -9,7 +9,7 @@ const htmlmin = require("gulp-htmlmin");
 gulp.task("server", function () {
 	browserSync({
 		server: {
-			baseDir: "dist",
+			baseDir: ".",
 		},
 	});
 
@@ -23,7 +23,7 @@ gulp.task("styles", function () {
 		.pipe(rename({ suffix: ".min", prefix: "" }))
 		.pipe(autoprefixer())
 		.pipe(cleanCSS({ compatibility: "ie8" }))
-		.pipe(gulp.dest("dist/css"))
+		.pipe(gulp.dest("./css"))
 		.pipe(browserSync.stream());
 });
 
@@ -40,7 +40,7 @@ gulp.task("html", function () {
 	return gulp
 		.src("src/*.html")
 		.pipe(htmlmin({ collapseWhitespace: true }))
-		.pipe(gulp.dest("dist/"));
+		.pipe(gulp.dest("."));
 });
 
 // gulp.task("scripts", function () {
@@ -67,7 +67,7 @@ gulp.task("html", function () {
 gulp.task("images", function () {
 	return gulp
 		.src("src/img/**/*", {encoding: false})
-		.pipe(gulp.dest("dist/img"))
+		.pipe(gulp.dest("./img"))
 		.pipe(browserSync.stream());
 });
 
