@@ -66,7 +66,7 @@ gulp.task("html", function () {
 
 gulp.task("images", function () {
 	return gulp
-		.src("src/img/**/*")
+		.src("src/img/**/*", {encoding: false})
 		.pipe(gulp.dest("dist/img"))
 		.pipe(browserSync.stream());
 });
