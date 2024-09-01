@@ -84,3 +84,14 @@ gulp.task(
 		"images"
 	)
 );
+
+gulp.task ("prod",
+	gulp.parallel(
+		"styles",
+		// "scripts",
+		// "fonts",
+		// "icons",
+		"html",
+		"images"
+	)
+);
